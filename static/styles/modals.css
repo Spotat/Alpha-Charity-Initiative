@@ -1,0 +1,270 @@
+
+/* Modal style */
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  /* background: rgba(102, 58, 0, 0.516); deep blue overlay */
+  background: rgba(0, 0, 0, 0.557);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #f9f9f9;
+  width: 1000px;
+  height: 90vh;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+}
+.modal-row:nth-child(1) {
+    background: url(../assets/images/pexels-ron-lach-9037596.jpg) no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+}
+.modal-over {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #0b2201eb;
+    /* background: #011122eb; */
+    backdrop-filter: brightness(80%);
+    padding: 2rem;
+    position: relative;
+    justify-content: center;
+}
+.modal-row:nth-child(2) {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.close-btn {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    padding: 10px;
+    font-size: 1.5rem !important;
+    background-color: rgba(255, 255, 255, 0.11);
+    color: white !important;
+    z-index: 99;
+    cursor: pointer;
+}
+.modal-row:nth-child(1) h2 {
+    /* font-size: 5vh; */
+    color: white;
+    text-transform: uppercase;
+    /* font-style: oblique; */
+}
+.modal-row:nth-child(2) h2 {
+    /* font-size: 5vh;
+    font-family: Lato-Bold;
+    text-transform: capitalize; */
+}
+.modal-row:nth-child(1) p {
+    margin-top: 1rem;
+    color: white;
+    /* font-family: Lato-Regular;
+    font-size: 14px; */
+}
+.modal-row:nth-child(2) p {
+    margin-top: 1rem;
+    /* font-family: Lato-Regular;
+    font-size: 14px; */
+}
+form {
+    height: fit-content;
+}
+.modal-row:nth-child(2) > form {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+form input {
+    height: fit-content;
+}
+.modal-row:nth-child(2) > form > input {
+    padding: 10px 20px;
+    border: 1.4px solid #5555553a;
+    font-family: "Inter", sans-serif;
+    color: #555;
+}
+form > button {
+    height: fit-content;
+    padding: 10px 1rem;
+    background-color: rgb(255, 145, 0); 
+    color: white;
+    /* font-family: Lato-Medium; */
+    border: none;
+    cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+
+/* Donation modal */
+#donationModal > .modal-content > .modal-row:nth-child(2) {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+#donationModal > .modal-content > .modal-row > .modal-over {
+    padding: 0%;
+}
+.modal-over > img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+form {
+    height: 100%;
+}
+.form_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.form_content {}
+
+.form_row {
+    width: 100%;
+}
+.form_row > h4 {
+    text-transform: uppercase;
+    color: rgb(36, 128, 0);
+    margin-top: 1rem;
+    /* font-size: 14px; */
+}
+.options {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.option {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.option > label {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+    text-wrap: nowrap;
+    font-size: 14px;
+    font-family: "Poppins-Regular", sans-serif;
+    margin: 0% !important;
+    padding: 0% !important;
+}
+
+/* Comprehensive refactor laptop view */
+.form_row#two_col {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1rem;
+    gap: 1rem;
+}
+.form_column {
+    display: grid;
+    gap: 10px;
+}
+.form_column > label {
+    font-weight: 600;
+    color: rgb(36, 128, 0);
+    text-transform: uppercase;
+    font-size: var(--font-size-h4);
+    font-family: "Poppins-Medium";
+    text-wrap: nowrap;
+}
+.form_row > label {
+    font-weight: 600;
+    color: rgb(36, 128, 0);
+    text-transform: uppercase;
+    font-size: var(--font-size-h4);
+    font-family: "Poppins-Medium";
+}
+.form_column > input {
+    padding: 10px 20px;
+    border: 1px solid #989898;
+    font-family: "Inter", sans-serif;
+}
+.form_row > input {
+    padding: 10px 20px;
+    border: 1px solid #989898;
+    font-family: "Inter", sans-serif;
+}
+.form_row#one_col {
+    display: grid;
+    gap: 10px;
+    margin-top: 1rem;
+}
+.form_content > button {
+    padding: 10px 20px;
+    background-color: rgb(255, 145, 0);
+    border: 2px solid rgb(255, 145, 0);
+    color: white;
+    border: none;
+    margin-top: 2rem;
+}
+
+@media (max-width: 760px) {
+
+    /* modal section */
+    .modal-overlay {
+        padding: 0;
+        background-color: transparent;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+    }
+    .modal-content {
+        grid-template-columns: 1fr;
+        height: 100vh;
+        overflow-y: scroll;
+    }
+    .modal-row {
+        display: block;
+    }
+    .modal-over {
+        padding: 8rem 2rem 2rem 2rem;
+    }
+    .modal-row:nth-child(2) {
+        /* overflow-y: scroll; */
+        overflow-y: visible;
+        height: fit-content;
+    }
+    .close-btn {
+        background-color: rgba(255, 255, 255, 0.247);
+    }
+    .modal-row:nth-child(1) h2 {
+        font-size: 1.4em;
+    }
+    .modal-row:nth-child(2) h2 {
+        font-size: 1.4em;
+    }
+    /* modal over */
+    .modal-over > img {
+        max-height: 30vh;
+        object-position: top;
+    }
+    .heading#modalHead > p {
+        font-size: 11px;
+    }
+    .form_container {
+        grid-template-columns: 1fr;
+    }
+    .form_row#two_col {
+        grid-template-columns: 1fr;
+    }
+}

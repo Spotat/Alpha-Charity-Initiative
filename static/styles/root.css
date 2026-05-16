@@ -1,0 +1,82 @@
+:root {
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.5rem;
+    --font-size-h4: 1rem;
+    --font-size-text: 16px;
+    --font-size-button: 16px;
+    --padding-mobile: 1rem;
+    --gap-mobile: 3rem;
+}
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url('../assets/fonts/Poppins/Poppins-Bold.ttf');
+}
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url('../assets/fonts/Poppins/Poppins-Medium.ttf');
+}
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url('../assets/fonts/Poppins/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: "Inter";
+    src: url('../assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf');
+}
+
+h1, h2, h3, h4 {
+    font-family: "Poppins-Bold", sans-serif;
+}
+p {
+    font-family: "Inter", sans-serif;
+}
+h1 {
+    font-size: var(--font-size-h1);
+    text-transform: capitalize;
+}
+h2 {
+    font-size: var(--font-size-h2);
+    text-transform: capitalize;
+}
+h3 {
+    font-size: var(--font-size-h3);
+    text-transform: capitalize;
+}
+h4 {
+    font-size: var(--font-size-h4);
+    text-transform: capitalize;
+}
+p {
+    font-size: var(--font-size-text);
+}
+button {
+    width: fit-content;
+    padding: 10px 20px;
+    font-family: "Poppins-Medium";
+    font-size: var(--font-size-button);
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media(max-width: 760px) {
+    :root {
+        --font-size-h1: 2rem;
+        --font-size-h2: 1.15rem;
+        --font-size-h3: 1rem;
+        --font-size-h4: .75rem;
+        --font-size-text: 14px;
+        --font-size-button: 14px;
+        --padding-mobile: 1rem;
+        --padding-top-bottom: 2rem;
+        --gap-mobile: 3rem;
+    }
+    h1, h2, h3, h4 {
+        font-family: "Poppins-Regular", sans-serif;
+    }
+}
