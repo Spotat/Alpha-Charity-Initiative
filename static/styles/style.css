@@ -414,6 +414,7 @@ header > button {
     gap: 5rem;
     overflow: hidden;
     background-color: rgba(36, 128, 0, 0.068);
+    backdrop-filter: brightness(70%);
     /* background-color: rgba(255, 145, 0, 0.068); */
 }
 .stats_row:nth-child(1) {
