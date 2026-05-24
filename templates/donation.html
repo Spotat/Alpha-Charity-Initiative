@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alpha Charity Donation</title>
+  <link rel="stylesheet" href="/static/styles/donation.css">
+  <link rel="stylesheet" href="/static/styles/root.css">
+</head>
+<body>
+  <h2>Donate via M-Pesa</h2>
+  <form id="donationForm">
+    <label for="phone">Phone Number (2547XXXXXXXX):</label><br>
+    <input type="text" id="phone" name="phone" required><br><br>
+
+    <label for="amount">Amount (KES):</label><br>
+    <input type="number" id="amount" name="amount" required><br><br>
+
+    <button type="submit">Donate</button>
+  </form>
+
+  <div id="response"></div>
+
+  <script>
+    document.getElementById("donationForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const phone = document.getElementById("phone").value;
+      const amount = document.getElementById("amount").value;
+
+      const res = await fetch("/donate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ amount: parseInt(amount), phone_number: phone })
+      });
+
+      const data = await res.json();
+      document.getElementById("response").innerText = JSON.stringify(data, null, 2);
+    });
+  </script>
+</body>
+</html>
